@@ -1,0 +1,1290 @@
+{
+  "total_scenarios": 20,
+  "batch_count": 1,
+  "batch_size": 100,
+  "generation_timestamp": "2025-09-12T14:48:54.184386",
+  "parameters_used": {
+    "warehouse_sizes": [
+      {
+        "area": 50000000,
+        "description": "소형창고 5,000m²"
+      },
+      {
+        "area": 100000000,
+        "description": "중형창고 10,000m²"
+      },
+      {
+        "area": 150000000,
+        "description": "대형창고 15,000m²"
+      },
+      {
+        "area": 300000000,
+        "description": "초대형창고 30,000m²"
+      }
+    ],
+    "equipment_configs": [
+      {
+        "name": "기본형",
+        "conveyor": [
+          5,
+          15
+        ],
+        "rtv": [
+          2,
+          8
+        ],
+        "srm": [
+          3,
+          12
+        ],
+        "robot_arm": [
+          0,
+          2
+        ],
+        "automation_level": 2
+      },
+      {
+        "name": "표준형",
+        "conveyor": [
+          10,
+          25
+        ],
+        "rtv": [
+          4,
+          12
+        ],
+        "srm": [
+          5,
+          15
+        ],
+        "robot_arm": [
+          1,
+          3
+        ],
+        "automation_level": 3
+      },
+      {
+        "name": "고급형",
+        "conveyor": [
+          15,
+          35
+        ],
+        "rtv": [
+          6,
+          18
+        ],
+        "srm": [
+          8,
+          20
+        ],
+        "robot_arm": [
+          1,
+          4
+        ],
+        "automation_level": 4
+      },
+      {
+        "name": "최고급형",
+        "conveyor": [
+          20,
+          50
+        ],
+        "rtv": [
+          10,
+          25
+        ],
+        "srm": [
+          10,
+          30
+        ],
+        "robot_arm": [
+          2,
+          6
+        ],
+        "automation_level": 5
+      }
+    ],
+    "operation_scenarios": [
+      {
+        "name": "평시",
+        "throughput_multiplier": 1.0,
+        "delay_multiplier": 1.0,
+        "error_rate": 0.03
+      },
+      {
+        "name": "성수기",
+        "throughput_multiplier": 1.8,
+        "delay_multiplier": 1.4,
+        "error_rate": 0.05
+      },
+      {
+        "name": "비수기",
+        "throughput_multiplier": 0.6,
+        "delay_multiplier": 0.8,
+        "error_rate": 0.02
+      },
+      {
+        "name": "피크타임",
+        "throughput_multiplier": 2.2,
+        "delay_multiplier": 2.0,
+        "error_rate": 0.08
+      },
+      {
+        "name": "야간운영",
+        "throughput_multiplier": 0.7,
+        "delay_multiplier": 0.9,
+        "error_rate": 0.04
+      }
+    ],
+    "equipment_conditions": [
+      {
+        "name": "최적상태",
+        "efficiency_factor": 1.0,
+        "breakdown_rate": 0.01
+      },
+      {
+        "name": "양호상태",
+        "efficiency_factor": 0.9,
+        "breakdown_rate": 0.03
+      },
+      {
+        "name": "보통상태",
+        "efficiency_factor": 0.8,
+        "breakdown_rate": 0.05
+      },
+      {
+        "name": "노후상태",
+        "efficiency_factor": 0.7,
+        "breakdown_rate": 0.1
+      }
+    ]
+  },
+  "batches": [
+    {
+      "batch_id": 1,
+      "scenario_count": 20,
+      "scenarios": [
+        {
+          "scenario_id": 1,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "최적상태",
+            "variation_id": 0,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.102969"
+          },
+          "query": {
+            "cnv": {
+              "Count": "9",
+              "AvgActualTime": "8.065417",
+              "AvgDelayTime": "21.659687",
+              "AvgWaitTime": "80.782437",
+              "AvgIdleTime": "1.750724",
+              "TotalInbound": "1060",
+              "TotalOutbound": "83"
+            },
+            "rtv": {
+              "Count": "4",
+              "AvgActualTime": "29.781189",
+              "AvgDelayTime": "5.346585",
+              "AvgWaitTime": "21.248612",
+              "AvgIdleTime": "16.049747",
+              "TotalInbound": "600",
+              "TotalOutbound": "162"
+            },
+            "srm": {
+              "Count": "8",
+              "AvgActualTime": "21.580821",
+              "AvgDelayTime": "8.833569",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "7.234194",
+              "TotalInbound": "667",
+              "TotalOutbound": "16"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "14.076500",
+              "AvgDelayTime": "4.350872",
+              "AvgWaitTime": "44.560206",
+              "AvgIdleTime": "24.860014",
+              "TotalInbound": "338",
+              "TotalOutbound": "52"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 2,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "최적상태",
+            "variation_id": 1,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.102969"
+          },
+          "query": {
+            "cnv": {
+              "Count": "13",
+              "AvgActualTime": "4.015493",
+              "AvgDelayTime": "10.614493",
+              "AvgWaitTime": "0.145062",
+              "AvgIdleTime": "0.050200",
+              "TotalInbound": "1115",
+              "TotalOutbound": "180"
+            },
+            "rtv": {
+              "Count": "2",
+              "AvgActualTime": "9.454450",
+              "AvgDelayTime": "2.775097",
+              "AvgWaitTime": "0.032960",
+              "AvgIdleTime": "0.295964",
+              "TotalInbound": "406",
+              "TotalOutbound": "72"
+            },
+            "srm": {
+              "Count": "6",
+              "AvgActualTime": "8.129787",
+              "AvgDelayTime": "5.306094",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.691024",
+              "TotalInbound": "593",
+              "TotalOutbound": "207"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "5.314629",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "0.049934",
+              "AvgIdleTime": "0.392475",
+              "TotalInbound": "412",
+              "TotalOutbound": "33"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 3,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "최적상태",
+            "variation_id": 2,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.102969"
+          },
+          "query": {
+            "cnv": {
+              "Count": "12",
+              "AvgActualTime": "5.978330",
+              "AvgDelayTime": "11.574118",
+              "AvgWaitTime": "8.391587",
+              "AvgIdleTime": "0.245010",
+              "TotalInbound": "960",
+              "TotalOutbound": "166"
+            },
+            "rtv": {
+              "Count": "6",
+              "AvgActualTime": "14.632512",
+              "AvgDelayTime": "5.040060",
+              "AvgWaitTime": "2.041661",
+              "AvgIdleTime": "1.870138",
+              "TotalInbound": "477",
+              "TotalOutbound": "94"
+            },
+            "srm": {
+              "Count": "11",
+              "AvgActualTime": "11.395881",
+              "AvgDelayTime": "7.041691",
+              "AvgWaitTime": "1.052332",
+              "AvgIdleTime": "2.818602",
+              "TotalInbound": "570",
+              "TotalOutbound": "219"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "9.604131",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "2.379440",
+              "AvgIdleTime": "1.439999",
+              "TotalInbound": "386",
+              "TotalOutbound": "1"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 4,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "최적상태",
+            "variation_id": 3,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.102969"
+          },
+          "query": {
+            "cnv": {
+              "Count": "5",
+              "AvgActualTime": "4.683120",
+              "AvgDelayTime": "8.314784",
+              "AvgWaitTime": "5.055050",
+              "AvgIdleTime": "0.605469",
+              "TotalInbound": "1299",
+              "TotalOutbound": "15"
+            },
+            "rtv": {
+              "Count": "5",
+              "AvgActualTime": "19.167434",
+              "AvgDelayTime": "6.153431",
+              "AvgWaitTime": "1.549591",
+              "AvgIdleTime": "7.018507",
+              "TotalInbound": "575",
+              "TotalOutbound": "256"
+            },
+            "srm": {
+              "Count": "12",
+              "AvgActualTime": "10.559034",
+              "AvgDelayTime": "11.200431",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "14.084978",
+              "TotalInbound": "699",
+              "TotalOutbound": "157"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "9.508603",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "2.824086",
+              "AvgIdleTime": "4.113269",
+              "TotalInbound": "380",
+              "TotalOutbound": "11"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 5,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "최적상태",
+            "variation_id": 4,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.102969"
+          },
+          "query": {
+            "cnv": {
+              "Count": "13",
+              "AvgActualTime": "4.234662",
+              "AvgDelayTime": "8.026588",
+              "AvgWaitTime": "7.545705",
+              "AvgIdleTime": "0.511410",
+              "TotalInbound": "1222",
+              "TotalOutbound": "95"
+            },
+            "rtv": {
+              "Count": "8",
+              "AvgActualTime": "17.567031",
+              "AvgDelayTime": "5.494389",
+              "AvgWaitTime": "0.542089",
+              "AvgIdleTime": "0.599963",
+              "TotalInbound": "573",
+              "TotalOutbound": "196"
+            },
+            "srm": {
+              "Count": "5",
+              "AvgActualTime": "11.663879",
+              "AvgDelayTime": "9.783437",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "2.153859",
+              "TotalInbound": "782",
+              "TotalOutbound": "6"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "1.106054",
+              "AvgDelayTime": "2.210074",
+              "AvgWaitTime": "1.335304",
+              "AvgIdleTime": "1.754264",
+              "TotalInbound": "422",
+              "TotalOutbound": "80"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 6,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "양호상태",
+            "variation_id": 0,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "10",
+              "AvgActualTime": "4.085132",
+              "AvgDelayTime": "9.470226",
+              "AvgWaitTime": "3.324864",
+              "AvgIdleTime": "0.320951",
+              "TotalInbound": "907",
+              "TotalOutbound": "163"
+            },
+            "rtv": {
+              "Count": "5",
+              "AvgActualTime": "15.550707",
+              "AvgDelayTime": "4.502034",
+              "AvgWaitTime": "1.186212",
+              "AvgIdleTime": "1.226820",
+              "TotalInbound": "485",
+              "TotalOutbound": "240"
+            },
+            "srm": {
+              "Count": "3",
+              "AvgActualTime": "12.596881",
+              "AvgDelayTime": "6.821866",
+              "AvgWaitTime": "0.651142",
+              "AvgIdleTime": "1.875777",
+              "TotalInbound": "586",
+              "TotalOutbound": "91"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "8.268128",
+              "AvgDelayTime": "2.312860",
+              "AvgWaitTime": "2.064222",
+              "AvgIdleTime": "1.993407",
+              "TotalInbound": "415",
+              "TotalOutbound": "44"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 7,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "양호상태",
+            "variation_id": 1,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "12",
+              "AvgActualTime": "7.320719",
+              "AvgDelayTime": "17.139740",
+              "AvgWaitTime": "30.618950",
+              "AvgIdleTime": "1.488616",
+              "TotalInbound": "801",
+              "TotalOutbound": "130"
+            },
+            "rtv": {
+              "Count": "4",
+              "AvgActualTime": "16.004710",
+              "AvgDelayTime": "10.943451",
+              "AvgWaitTime": "2.341390",
+              "AvgIdleTime": "3.318284",
+              "TotalInbound": "415",
+              "TotalOutbound": "240"
+            },
+            "srm": {
+              "Count": "9",
+              "AvgActualTime": "16.956538",
+              "AvgDelayTime": "9.013460",
+              "AvgWaitTime": "6.111621",
+              "AvgIdleTime": "2.386938",
+              "TotalInbound": "604",
+              "TotalOutbound": "26"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "10.065109",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "22.656506",
+              "AvgIdleTime": "5.199395",
+              "TotalInbound": "345",
+              "TotalOutbound": "6"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 8,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "양호상태",
+            "variation_id": 2,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "13",
+              "AvgActualTime": "5.127456",
+              "AvgDelayTime": "11.695486",
+              "AvgWaitTime": "10.937857",
+              "AvgIdleTime": "0.888667",
+              "TotalInbound": "1283",
+              "TotalOutbound": "34"
+            },
+            "rtv": {
+              "Count": "8",
+              "AvgActualTime": "11.048187",
+              "AvgDelayTime": "2.747648",
+              "AvgWaitTime": "4.095689",
+              "AvgIdleTime": "4.400211",
+              "TotalInbound": "609",
+              "TotalOutbound": "124"
+            },
+            "srm": {
+              "Count": "6",
+              "AvgActualTime": "7.598524",
+              "AvgDelayTime": "7.599419",
+              "AvgWaitTime": "2.198308",
+              "AvgIdleTime": "2.027147",
+              "TotalInbound": "773",
+              "TotalOutbound": "258"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "7.942536",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "4.101675",
+              "AvgIdleTime": "2.693874",
+              "TotalInbound": "347",
+              "TotalOutbound": "31"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 9,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "양호상태",
+            "variation_id": 3,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "11",
+              "AvgActualTime": "5.301437",
+              "AvgDelayTime": "14.230775",
+              "AvgWaitTime": "3.087977",
+              "AvgIdleTime": "0.301913",
+              "TotalInbound": "1065",
+              "TotalOutbound": "208"
+            },
+            "rtv": {
+              "Count": "7",
+              "AvgActualTime": "13.927496",
+              "AvgDelayTime": "10.808830",
+              "AvgWaitTime": "0.837858",
+              "AvgIdleTime": "0.986722",
+              "TotalInbound": "521",
+              "TotalOutbound": "287"
+            },
+            "srm": {
+              "Count": "7",
+              "AvgActualTime": "11.264525",
+              "AvgDelayTime": "8.251489",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.956836",
+              "TotalInbound": "514",
+              "TotalOutbound": "136"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "8.432990",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "2.254883",
+              "AvgIdleTime": "0.708283",
+              "TotalInbound": "366",
+              "TotalOutbound": "17"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 10,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "양호상태",
+            "variation_id": 4,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "13",
+              "AvgActualTime": "1.334750",
+              "AvgDelayTime": "2.328181",
+              "AvgWaitTime": "26.886202",
+              "AvgIdleTime": "0.158884",
+              "TotalInbound": "851",
+              "TotalOutbound": "22"
+            },
+            "rtv": {
+              "Count": "5",
+              "AvgActualTime": "2.799438",
+              "AvgDelayTime": "1.768943",
+              "AvgWaitTime": "3.859336",
+              "AvgIdleTime": "0.543105",
+              "TotalInbound": "517",
+              "TotalOutbound": "266"
+            },
+            "srm": {
+              "Count": "12",
+              "AvgActualTime": "3.539606",
+              "AvgDelayTime": "1.834948",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.378900",
+              "TotalInbound": "586",
+              "TotalOutbound": "14"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "0.398081",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "12.648706",
+              "AvgIdleTime": "0.250524",
+              "TotalInbound": "424",
+              "TotalOutbound": "41"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 11,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "보통상태",
+            "variation_id": 0,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "5",
+              "AvgActualTime": "1.677383",
+              "AvgDelayTime": "5.934069",
+              "AvgWaitTime": "17.602949",
+              "AvgIdleTime": "0.608642",
+              "TotalInbound": "845",
+              "TotalOutbound": "91"
+            },
+            "rtv": {
+              "Count": "4",
+              "AvgActualTime": "5.513197",
+              "AvgDelayTime": "1.977345",
+              "AvgWaitTime": "6.325470",
+              "AvgIdleTime": "3.357425",
+              "TotalInbound": "317",
+              "TotalOutbound": "68"
+            },
+            "srm": {
+              "Count": "10",
+              "AvgActualTime": "4.252546",
+              "AvgDelayTime": "4.285193",
+              "AvgWaitTime": "3.754031",
+              "AvgIdleTime": "2.083749",
+              "TotalInbound": "442",
+              "TotalOutbound": "53"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "1.909938",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "14.597086",
+              "AvgIdleTime": "4.283813",
+              "TotalInbound": "279",
+              "TotalOutbound": "32"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 12,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "보통상태",
+            "variation_id": 1,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "5",
+              "AvgActualTime": "3.503199",
+              "AvgDelayTime": "10.166497",
+              "AvgWaitTime": "15.012859",
+              "AvgIdleTime": "1.848303",
+              "TotalInbound": "818",
+              "TotalOutbound": "235"
+            },
+            "rtv": {
+              "Count": "8",
+              "AvgActualTime": "9.969654",
+              "AvgDelayTime": "7.100453",
+              "AvgWaitTime": "6.934005",
+              "AvgIdleTime": "20.627512",
+              "TotalInbound": "428",
+              "TotalOutbound": "178"
+            },
+            "srm": {
+              "Count": "12",
+              "AvgActualTime": "11.906155",
+              "AvgDelayTime": "6.970686",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "29.721298",
+              "TotalInbound": "419",
+              "TotalOutbound": "112"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "6.198140",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "11.428118",
+              "AvgIdleTime": "7.770667",
+              "TotalInbound": "297",
+              "TotalOutbound": "14"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 13,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "보통상태",
+            "variation_id": 2,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "5",
+              "AvgActualTime": "4.444052",
+              "AvgDelayTime": "9.142074",
+              "AvgWaitTime": "20.594301",
+              "AvgIdleTime": "0.118888",
+              "TotalInbound": "918",
+              "TotalOutbound": "233"
+            },
+            "rtv": {
+              "Count": "6",
+              "AvgActualTime": "8.677529",
+              "AvgDelayTime": "8.766776",
+              "AvgWaitTime": "2.651368",
+              "AvgIdleTime": "0.103645",
+              "TotalInbound": "435",
+              "TotalOutbound": "158"
+            },
+            "srm": {
+              "Count": "7",
+              "AvgActualTime": "6.980417",
+              "AvgDelayTime": "7.637549",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.263059",
+              "TotalInbound": "589",
+              "TotalOutbound": "36"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "1.243548",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "8.341362",
+              "AvgIdleTime": "0.342761",
+              "TotalInbound": "277",
+              "TotalOutbound": "6"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 14,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "보통상태",
+            "variation_id": 3,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "10",
+              "AvgActualTime": "10.174292",
+              "AvgDelayTime": "18.608726",
+              "AvgWaitTime": "10.635432",
+              "AvgIdleTime": "0.266450",
+              "TotalInbound": "796",
+              "TotalOutbound": "232"
+            },
+            "rtv": {
+              "Count": "6",
+              "AvgActualTime": "33.691630",
+              "AvgDelayTime": "7.075228",
+              "AvgWaitTime": "2.114050",
+              "AvgIdleTime": "1.764920",
+              "TotalInbound": "500",
+              "TotalOutbound": "79"
+            },
+            "srm": {
+              "Count": "12",
+              "AvgActualTime": "23.941152",
+              "AvgDelayTime": "11.922131",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "2.324855",
+              "TotalInbound": "459",
+              "TotalOutbound": "96"
+            },
+            "robotArm": {
+              "Count": "1",
+              "AvgActualTime": "9.450231",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "7.536743",
+              "AvgIdleTime": "0.576986",
+              "TotalInbound": "315",
+              "TotalOutbound": "49"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 15,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "보통상태",
+            "variation_id": 4,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "15",
+              "AvgActualTime": "6.548952",
+              "AvgDelayTime": "13.555639",
+              "AvgWaitTime": "59.168544",
+              "AvgIdleTime": "0.073153",
+              "TotalInbound": "804",
+              "TotalOutbound": "197"
+            },
+            "rtv": {
+              "Count": "8",
+              "AvgActualTime": "13.328420",
+              "AvgDelayTime": "7.466565",
+              "AvgWaitTime": "17.921488",
+              "AvgIdleTime": "0.216978",
+              "TotalInbound": "280",
+              "TotalOutbound": "43"
+            },
+            "srm": {
+              "Count": "12",
+              "AvgActualTime": "19.439329",
+              "AvgDelayTime": "17.472854",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.351856",
+              "TotalInbound": "383",
+              "TotalOutbound": "133"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "1.702938",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "42.268229",
+              "AvgIdleTime": "0.328980",
+              "TotalInbound": "284",
+              "TotalOutbound": "51"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 16,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "노후상태",
+            "variation_id": 0,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "11",
+              "AvgActualTime": "5.944230",
+              "AvgDelayTime": "24.217578",
+              "AvgWaitTime": "34.143052",
+              "AvgIdleTime": "0.014652",
+              "TotalInbound": "775",
+              "TotalOutbound": "191"
+            },
+            "rtv": {
+              "Count": "3",
+              "AvgActualTime": "19.420919",
+              "AvgDelayTime": "4.211338",
+              "AvgWaitTime": "9.045144",
+              "AvgIdleTime": "0.130320",
+              "TotalInbound": "387",
+              "TotalOutbound": "137"
+            },
+            "srm": {
+              "Count": "10",
+              "AvgActualTime": "15.772358",
+              "AvgDelayTime": "14.833362",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.174997",
+              "TotalInbound": "468",
+              "TotalOutbound": "99"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "5.302437",
+              "AvgDelayTime": "4.196625",
+              "AvgWaitTime": "5.173497",
+              "AvgIdleTime": "0.165572",
+              "TotalInbound": "250",
+              "TotalOutbound": "2"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 17,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "노후상태",
+            "variation_id": 1,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "11",
+              "AvgActualTime": "6.195516",
+              "AvgDelayTime": "19.347082",
+              "AvgWaitTime": "4.957279",
+              "AvgIdleTime": "1.115605",
+              "TotalInbound": "610",
+              "TotalOutbound": "70"
+            },
+            "rtv": {
+              "Count": "5",
+              "AvgActualTime": "20.372358",
+              "AvgDelayTime": "14.354847",
+              "AvgWaitTime": "0.786030",
+              "AvgIdleTime": "2.617117",
+              "TotalInbound": "291",
+              "TotalOutbound": "153"
+            },
+            "srm": {
+              "Count": "9",
+              "AvgActualTime": "11.441097",
+              "AvgDelayTime": "15.426684",
+              "AvgWaitTime": "0.995922",
+              "AvgIdleTime": "5.742759",
+              "TotalInbound": "301",
+              "TotalOutbound": "53"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "12.099076",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "2.408970",
+              "AvgIdleTime": "2.593435",
+              "TotalInbound": "217",
+              "TotalOutbound": "3"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 18,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "노후상태",
+            "variation_id": 2,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "15",
+              "AvgActualTime": "6.140827",
+              "AvgDelayTime": "18.015442",
+              "AvgWaitTime": "4.654044",
+              "AvgIdleTime": "0.643254",
+              "TotalInbound": "754",
+              "TotalOutbound": "37"
+            },
+            "rtv": {
+              "Count": "3",
+              "AvgActualTime": "16.868352",
+              "AvgDelayTime": "11.170163",
+              "AvgWaitTime": "1.285912",
+              "AvgIdleTime": "2.656896",
+              "TotalInbound": "346",
+              "TotalOutbound": "154"
+            },
+            "srm": {
+              "Count": "10",
+              "AvgActualTime": "18.984724",
+              "AvgDelayTime": "20.212554",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "3.384164",
+              "TotalInbound": "477",
+              "TotalOutbound": "65"
+            },
+            "robotArm": {
+              "Count": "0",
+              "AvgActualTime": "7.028119",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "1.874543",
+              "AvgIdleTime": "4.692964",
+              "TotalInbound": "284",
+              "TotalOutbound": "13"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 19,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "노후상태",
+            "variation_id": 3,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "12",
+              "AvgActualTime": "5.027326",
+              "AvgDelayTime": "14.254133",
+              "AvgWaitTime": "10.438935",
+              "AvgIdleTime": "0.018155",
+              "TotalInbound": "665",
+              "TotalOutbound": "190"
+            },
+            "rtv": {
+              "Count": "6",
+              "AvgActualTime": "9.170381",
+              "AvgDelayTime": "8.827090",
+              "AvgWaitTime": "1.201118",
+              "AvgIdleTime": "0.153417",
+              "TotalInbound": "418",
+              "TotalOutbound": "79"
+            },
+            "srm": {
+              "Count": "5",
+              "AvgActualTime": "7.589346",
+              "AvgDelayTime": "13.603029",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "0.071767",
+              "TotalInbound": "503",
+              "TotalOutbound": "2"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "2.911178",
+              "AvgDelayTime": "2.868798",
+              "AvgWaitTime": "1.438875",
+              "AvgIdleTime": "0.214458",
+              "TotalInbound": "214",
+              "TotalOutbound": "18"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        },
+        {
+          "scenario_id": 20,
+          "metadata": {
+            "warehouse_type": "소형창고 5,000m²",
+            "equipment_config": "기본형",
+            "operation_scenario": "평시",
+            "equipment_condition": "노후상태",
+            "variation_id": 4,
+            "automation_level": 2,
+            "simulation_date": "2025-09-12T14:48:54.104006"
+          },
+          "query": {
+            "cnv": {
+              "Count": "15",
+              "AvgActualTime": "3.925408",
+              "AvgDelayTime": "14.204344",
+              "AvgWaitTime": "23.358865",
+              "AvgIdleTime": "0.841115",
+              "TotalInbound": "863",
+              "TotalOutbound": "244"
+            },
+            "rtv": {
+              "Count": "3",
+              "AvgActualTime": "16.311678",
+              "AvgDelayTime": "9.405734",
+              "AvgWaitTime": "4.757250",
+              "AvgIdleTime": "1.285968",
+              "TotalInbound": "361",
+              "TotalOutbound": "209"
+            },
+            "srm": {
+              "Count": "12",
+              "AvgActualTime": "9.225870",
+              "AvgDelayTime": "12.551137",
+              "AvgWaitTime": "0.000000",
+              "AvgIdleTime": "4.147024",
+              "TotalInbound": "481",
+              "TotalOutbound": "84"
+            },
+            "robotArm": {
+              "Count": "2",
+              "AvgActualTime": "8.411437",
+              "AvgDelayTime": "0.000000",
+              "AvgWaitTime": "19.369594",
+              "AvgIdleTime": "2.945884",
+              "TotalInbound": "250",
+              "TotalOutbound": "3"
+            },
+            "rack": {
+              "Count": "10"
+            },
+            "randingArea": {
+              "Area": "50000000"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
